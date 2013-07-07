@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<config>
+  <varlist>
+    <var name="FloatVar1" type="float" value="100.0"/>
+    <var name="FloatVar2" type="int32" value="1002"/>
+  </varlist>
+  
+  <mappinglist>
+	  <mapping varname="FloatVar2" access="read" component="label1" property="Text"/>
+	  <mapping varname="FloatVar2" access="readwrite" component="button1" property="Text"/>
+  </mappinglist>
+  
+  <defaultnamespace name="System.Windows.Forms"/>
+  
+  <controllist>
+    <control class="Label">
+      <property name="Name" value="label2"/>
+      <property name="Text" value="text_label2"/>
+      <classproperty name="Location" class="System.Drawing.Point"> <!--имя_сборки.имя_класса-->
+        <parameter name="X" typename="int" value="100"/>
+        <parameter name="Y" typename="int" value="200"/>
+      </classproperty>
+      <!-- здесь могут находиться вложенные контролы, образующие иерархию-->
+      <!--
+        <control class="Label">
+          <property name="Name" value="label2"/>
+          <property name="Text" value="ololo1"/>
+          <property name="Location" class="Point">
+            <parameter name="X" value="100"/>
+            <parameter name="Y" value="200"/>
+          </property>
+        </control>
+       -->
+    </control>
+    <control class="System.Windows.Forms.Label"> <!--можно указывать namespace в явном виде-->
+      <property name="Name" value="label3"/>
+      <property name="Text" value="text_label3"/>
+      <classproperty name="Location" class="System.Drawing.Point"> <!--имя_сборки.имя_класса-->
+        <parameter name="X" typename="int" value="100"/>
+        <parameter name="Y" typename="int" value="250"/>
+      </classproperty>
+      <!-- здесь могут находиться вложенные контролы, образующие иерархию-->
+    </control>
+  </controllist>
+</config>
